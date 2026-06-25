@@ -33,6 +33,6 @@ public class Check_Palindrome {
 			System.out.println(num + " is not palindrome...");
 		}
 
-	}
+	} // Time complexity : O(log10(N) + 1)
 
 }
