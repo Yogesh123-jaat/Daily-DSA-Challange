@@ -25,6 +25,6 @@ public class Fibonacci {
 		int slast = fun(n - 2);
 		
 		return last + slast;
-	}
+	}  // TC : O(2^N)  Exponential in Nature
 
 }
