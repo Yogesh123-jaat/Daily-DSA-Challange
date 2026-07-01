@@ -1,12 +1,12 @@
-package Arrays;
+package ArraysPractice;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class ReverseArray {
 
-	public static void main(String[] args) {
-		
+	public static void main(String[] args)
+	{
 		Scanner sc = new Scanner(System.in);
 		
 		int[] arr = {12,15,65,47,85,96,32,19,65,89,85};

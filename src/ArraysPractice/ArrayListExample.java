@@ -1,7 +1,6 @@
-package Arrays;
+package ArraysPractice;
 
 import java.util.ArrayList;
-
 import java.util.Scanner;
 
 public class ArrayListExample {
@@ -19,12 +18,14 @@ public class ArrayListExample {
 //		list.add(75);
 //		list.add(23);
 //		
-//		System.out.println(list.contains(456982));
+//		System.out.println(list.contains(45666));
 //		
 //		System.out.println(list);
-//		list.set(0, 99);
+//		
+//		list.set(0 , 99);
 //		
 //		System.out.println(list);
+//		
 //		list.remove(2);
 //		
 //		System.out.println(list);

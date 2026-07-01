@@ -1,34 +1,28 @@
-package Arrays;
+package ArraysPractice;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ReverseArray {
+public class Swap {
 
-	public static void main(String[] args) {
-		
+	public static void main(String[] args)
+	{
 		Scanner sc = new Scanner(System.in);
 		
-		int[] arr = {12,15,65,47,85,96,32,19,65,89,85};
+		int[] arr = {1,18,12,65,45,25,96};
 		
 		System.out.println(Arrays.toString(arr));
 		
-		reverse(arr);
+		
+		System.out.println("Enter the idx1 : ");
+		int idx1 = sc.nextInt();
+		
+		System.out.println("Enter the idx2 : ");
+		int idx2 = sc.nextInt();
+		
+		swap(arr , idx1 , idx2);
 		
 		System.out.println(Arrays.toString(arr));
-	}
-	
-	static void reverse(int[] arr)
-	{
-		int start = 0;
-		int end = arr.length - 1;
-		
-		while(start < end)
-		{
-			swap(arr , start , end);
-			start++;
-			end--;
-		}
 	}
 	
 	static void swap(int[] arr , int idx1 , int idx2)
