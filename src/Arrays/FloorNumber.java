@@ -5,7 +5,7 @@ public class FloorNumber
 	public static void main(String[] args) 
 	{	
 		int[] arr = {2 , 3 , 5 , 9 , 14 , 16 , 18};
-		int target = 1;
+		int target = 8;
 		
 		System.out.println(floor(arr , target));
 	}

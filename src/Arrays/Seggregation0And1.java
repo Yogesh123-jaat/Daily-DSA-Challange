@@ -27,7 +27,7 @@ public class Seggregation0And1 {
 		
 		//int n = arr.length;
 		int i = 0; 
-		int j = arr.length - 1;
+		int j = arr.length - 1;  // 1 0 1 0 1 0 0 
 		
 		while(i < j)
 		{

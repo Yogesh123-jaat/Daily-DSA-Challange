@@ -7,7 +7,7 @@ public class RotateArray {
 		int[] arr = {13 , 15 , 11 , 25 , 45 ,58 , 47 , 89 ,36 , 69};
 		int n = arr.length;
 		
-		int d = 25;
+		int d = 4;
 		
 		d = d % n;
 		
