@@ -1,33 +1,30 @@
 package TwoDArray;
 
-public class MinimumEleOutOfAllMaxEle {
-
+public class FindMinEleMaxRow 
+{
 	public static void main(String[] args) 
 	{
-		//int[][] arr = {{2,8,3,4,7} , {7,2,1,6,3} , {5,5,4,1,4} , {3,1,8,2,6}};
 		int[][] arr = {{1,2,3,4},{7,1,1,1},{8,2,2,2}};
-		
-		int maxRow = -1;
 		int min = Integer.MAX_VALUE;
+		int max = arr[0][0];
 		
 		for(int i = 0; i < arr.length; i++)
 		{
-			maxRow = Integer.MIN_VALUE;
+			//int max = arr[i][0];
 			for(int j = 0; j < arr[i].length; j++)
 			{
-				if(arr[i][j] > maxRow)
+				if(max < arr[i][j])
 				{
-					maxRow = arr[i][j];
+					max = arr[i][j];
 				}
 			}
-			if(min > maxRow)
+			System.out.println(max);
+			if(min > max)
 			{
-				min = maxRow;
+				min = max;
 			}
-		
 		}
 		
 		System.out.println(min);
 	}
-
 }
