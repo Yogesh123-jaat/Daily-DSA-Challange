@@ -54,6 +54,6 @@ public class DisplayList
 //		displayRec(a);
 		
 		System.out.println();
-		System.out.println(get(a , 2));
+		System.out.println(get(a , 0));
 	}
 }
