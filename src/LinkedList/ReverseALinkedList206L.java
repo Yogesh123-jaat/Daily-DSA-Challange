@@ -41,6 +41,9 @@ public class ReverseALinkedList206L
         int n = arr.size();
         for(int i = n - 1; i >= 1; i--)
         {
+//        	Node t1 = arr.get(i);
+//        	Node t2 = arr.get(i-1);
+//        	t1.next = t2; 
             arr.get(i).next = arr.get(i-1);
         }
         arr.get(0).next = null;
