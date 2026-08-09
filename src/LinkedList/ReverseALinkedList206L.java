@@ -50,5 +50,17 @@ public class ReverseALinkedList206L
         return arr.get(n-1);
     }
 	
+	public static Node reverseRec(Node head)
+	{
+		if(head == null || head.next == null) return head;
+		
+		Node a = head.next;
+		head.next = null;
+		
+		Node b = reverseRec(a);
+		a.next = head;
+		return b;
+	}
+	
 	
 }
