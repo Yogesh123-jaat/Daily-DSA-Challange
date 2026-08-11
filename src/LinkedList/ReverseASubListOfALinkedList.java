@@ -1,5 +1,7 @@
 package LinkedList;
 
+import java.util.ArrayList;
+
 public class ReverseASubListOfALinkedList 
 {
 	public static void main(String[] args) 
@@ -52,37 +54,37 @@ public class ReverseASubListOfALinkedList
         
         return dummy.next;
     }
-    // Node reverseBetween(int a, int b, Node head) 
-    // {
-    //     ArrayList<Node> arr = new ArrayList<>();
-    //     Node temp = head;
+     Node reverseBetween2(int a, int b, Node head) 
+     {
+         ArrayList<Node> arr = new ArrayList<>();
+         Node temp = head;
         
-    //     while(temp != null)
-    //     {
-    //         arr.add(temp);
-    //         temp = temp.next;
-    //     }
+         while(temp != null)
+         {
+             arr.add(temp);
+             temp = temp.next;
+         }
         
-    //     int i = a-1;
-    //     int j = b-1;
+         int i = a-1;
+         int j = b-1;
         
-    //     while(i < j)
-    //     {
-    //         Node t1 = arr.get(i);
-    //         Node t2 = arr.get(j);
+         while(i < j)
+         {
+             Node t1 = arr.get(i);
+             Node t2 = arr.get(j);
             
-    //         arr.set(i,t2);
-    //         arr.set(j,t1);
+             arr.set(i,t2);
+             arr.set(j,t1);
             
-    //         i++;
-    //         j--;
-    //     }
+             i++;
+             j--;
+         }
         
-    //     for(i = 0; i < arr.size(); i++)
-    //     {
-    //         arr.get(i).next = (i == arr.size() - 1) ? null : arr.get(i+1);
-    //     }
+         for(i = 0; i < arr.size(); i++)
+         {
+             arr.get(i).next = (i == arr.size() - 1) ? null : arr.get(i+1);
+         }
         
-    //     return arr.get(0);
-    // }
+         return arr.get(0);
+     }
 }
