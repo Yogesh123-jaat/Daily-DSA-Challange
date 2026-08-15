@@ -33,7 +33,7 @@ public class SelectionSortFindLargestFirst {
 			int maxIdx = i;
 			for(int j = i-1; j >= 0; j--)
 			{
-				if(arr[j] > arr[maxIdx])
+				if(arr[j] < arr[maxIdx])
 				{
 					maxIdx = j;
 				}
