@@ -38,7 +38,7 @@ public class RemoveNodesFromLinkedList
        {
             ListNode top = st.pop();
             top.next = temp;
-            temp = top;
+            temp = top;   // TC : O(n)
        }
 
        return temp;
