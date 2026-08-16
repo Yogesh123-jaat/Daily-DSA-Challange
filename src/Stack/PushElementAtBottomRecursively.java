@@ -12,6 +12,9 @@ public class PushElementAtBottomRecursively
 		st.push(30);
 		st.push(40);
 		
+		System.out.println(st.size());
+		System.out.println(st.isEmpty());
+		
 		int ele = 50;
 		pushAtBottom(st , ele);
 		
