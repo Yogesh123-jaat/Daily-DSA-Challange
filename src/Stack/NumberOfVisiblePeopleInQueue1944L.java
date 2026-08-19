@@ -1,0 +1,38 @@
+package Stack;
+
+import java.util.Stack;
+
+public class NumberOfVisiblePeopleInQueue1944L 
+{
+	public static void main(String[] args) 
+	{
+		
+	}
+	
+	public int[] canSeePersonsCount(int[] arr) 
+    {
+        int n = arr.length;
+        int[] ans = new int[n];
+        Stack<Integer> st = new Stack<>();
+
+        st.push(arr[n-1]);
+        ans[n-1] = 0;
+
+        for(int i = n-2; i >= 0; i--)
+        {
+            int count = 0;
+
+            while(st.size() > 0 && arr[i] >= st.peek())
+            {
+                st.pop();
+                count++;
+            }
+
+            if(st.size() > 0) count++;
+            ans[i] = count;
+            st.push(arr[i]);
+        }
+
+        return ans;
+    }
+}
