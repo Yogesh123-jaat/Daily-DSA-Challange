@@ -10,7 +10,7 @@ public class FindTheWinnerOfCircularGame
 		
 	}
 	
-	public static int findTheWinner(int n, int k) 
+	public static int findTheWinner(int n, int k)  // T.C. = O(k*n)
     {
         Queue<Integer> q = new LinkedList<>();
         for(int i = 1; i <= n; i++)
