@@ -2,7 +2,7 @@ package Queues;
 
 import java.util.Stack;
 
-class QueueStack 
+class QueueStack     // ADD Efficient Approach
 {
     Stack<Integer> st = new Stack<>();
     Stack<Integer> helper = new Stack<>();
@@ -55,7 +55,7 @@ class QueueStack
         return (st.size() == 0);  
     }
 }
-public class QueueImplementationByQueue
+public class QueueImplementationByStack
 {
 	public static void main(String[] args) 
 	{
