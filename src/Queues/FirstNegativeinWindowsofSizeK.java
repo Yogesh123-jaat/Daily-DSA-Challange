@@ -7,14 +7,14 @@ import java.util.Queue;
 
 public class FirstNegativeinWindowsofSizeK 
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)  
 	{
 		int[] arr = {-8, 2, 3, -6, 10};
 		
 		System.out.println(firstNegInt(arr , 2));
 	}
 	
-	static List<Integer> firstNegInt(int arr[], int k) 
+	static List<Integer> firstNegInt(int arr[], int k) // TC : O(n)   
     {
 		ArrayList<Integer> ans = new ArrayList<>();
 		int n = arr.length;
@@ -34,4 +34,30 @@ public class FirstNegativeinWindowsofSizeK
 		
 		return ans;
     }
+	
+	static List<Integer> firstNegInt2(int arr[], int k) 
+	 {
+       ArrayList<Integer> ans = new ArrayList<>();
+       int n = arr.length;
+       boolean flag = false;
+       
+       for(int i = 0; i < n-k+1; i++)
+       {
+           // flag = false;
+           for(int j = i; j < i+k; j++)
+           {
+               if(arr[j] < 0) 
+               {
+                   ans.add(arr[j]);
+                   break;
+               }
+               if(j == i+k-1 && arr[j] >= 0) 
+               {
+                   ans.add(0);
+               }
+           }
+       }
+       
+       return ans;
+	 }  // TC : O(n*k)
 }
