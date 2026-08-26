@@ -33,7 +33,9 @@ public class Implementation
 		b.left = d; b.right = e;
 		c.left = f; c.right = g;
 		
-		display(a);
+		preOrder(a);
+		inOrder(a);
+		postOrder(a);
 		System.out.println();
 		System.out.println(size(a));
 		System.out.println(sum(a));
@@ -92,12 +94,28 @@ public class Implementation
 		return Math.min(root.val , Math.min(min(root.left), min(root.right)));
 	}
 	
-	public static void display(Node root)
+	public static void preOrder(Node root)
 	{
 		if(root == null) return;
 		
 		System.out.print(root.val + " ");
-		display(root.left);
-		display(root.right);
+		preOrder(root.left);
+		preOrder(root.right);
+	}
+	public static void inOrder(Node root)
+	{
+		if(root == null) return;
+		
+		System.out.print(root.val + " ");
+		inOrder(root.left);
+		inOrder(root.right);
+	}
+	public static void postOrder(Node root)
+	{
+		if(root == null) return;
+		
+		System.out.print(root.val + " ");
+		postOrder(root.left);
+		postOrder(root.right);
 	}
 }
