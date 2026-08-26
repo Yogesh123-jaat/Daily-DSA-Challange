@@ -41,6 +41,13 @@ public class Implementation
 		System.out.println(productNonZero(a));
 		System.out.println(max(a));
 		System.out.println(min(a));
+		System.out.println(levels(a));
+	}
+	
+	public static int levels(Node root)
+	{
+		if(root == null) return 0;
+		return 1 + Math.max(levels(root.left) , levels(root.right));
 	}
 	
 	public static int size(Node root)
