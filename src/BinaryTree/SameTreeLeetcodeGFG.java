@@ -1,0 +1,16 @@
+package BinaryTree;
+
+public class SameTreeLeetcodeGFG 
+{
+	public static void main(String[] args) 
+	{
+		
+	}
+	public static boolean isIdentical(Node p , Node q)
+	{
+		if(p == null && q == null) return true;
+		if(p == null || q == null) return false;
+		if(p.val != q.val) return false;
+		return isIdentical(p.left , q.left) && isIdentical(q.left , q.right);
+	}
+}
