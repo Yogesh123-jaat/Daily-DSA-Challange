@@ -1,0 +1,21 @@
+package BinaryTree;
+
+import javax.swing.tree.TreeNode;
+
+public class PathSumLeetcode
+{
+	public static void main(String[] args) 
+	{
+		
+	}
+	public boolean hasPathSum(Node root, int targetSum) 
+    {
+        if(root == null) return false;
+        if(root.left == null && root.right == null)
+        {
+            if(targetSum == root.val) return true;
+            else return false;
+        }
+        return hasPathSum(root.left , targetSum - root.val) || hasPathSum(root.right , targetSum - root.val);    
+    }
+}
