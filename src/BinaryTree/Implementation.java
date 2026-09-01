@@ -62,7 +62,23 @@ public class Implementation
 //		System.out.println(levels(a));
 //		levelOrder(a);
 		
-		levelOrderLineWise(a);
+//		levelOrderLineWise(a);
+//		kThLevel(a , 0 , 2);
+		
+		for(int i = 0; i < levels(a); i++)     // O(n^2)
+		{
+			kThLevel(a , 0 , i);
+			System.out.println();
+		}
+	}
+	
+	public static void kThLevel(Node root , int level , int k)  // O(N)
+	{
+		if(root == null) return;
+		
+		if(level == k) System.out.print(root.val + " ");
+		kThLevel(root.left , level + 1 , k);
+		kThLevel(root.right , level + 1 , k);
 	}
 	
 	public static void levelOrder(Node root)

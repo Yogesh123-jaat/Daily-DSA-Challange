@@ -1,0 +1,36 @@
+package BinaryTree;
+
+import java.util.ArrayList;
+
+public class RootToLeafPathsGFG 
+{
+	public static void main(String[] args) 
+	{
+		
+	}
+	public ArrayList<ArrayList<Integer>> paths(Node root) 
+    {
+        ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
+        ArrayList<Integer> arr = new ArrayList<>();
+        dfs(root , arr , ans);
+        
+        return ans;
+    }
+    
+    public void dfs(Node root , ArrayList<Integer> arr , ArrayList<ArrayList<Integer>> ans)
+    {
+        if(root == null) return;
+        arr.add(root.val);
+        
+        if(root.left == null && root.right == null)
+        {
+            ArrayList<Integer> list = new ArrayList<>();
+            list.addAll(arr);
+            ans.add(list);
+        }
+        
+        dfs(root.left , arr , ans);
+        dfs(root.right , arr , ans);
+        arr.remove(arr.size() - 1);
+    }
+}
